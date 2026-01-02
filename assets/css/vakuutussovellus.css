@@ -1,0 +1,490 @@
+.vs-project {
+  --vs-bg-cream: var(--grey-200);
+  --vs-bg-dark: var(--grey-900);
+  --vs-text-dark: var(--grey-900);
+  --vs-text-muted: var(--grey-800);
+  --vs-text-light: var(--grey-100);
+  --vs-text-light-muted: var(--grey-500);
+  --vs-border-light: var(--grey-400);
+  --vs-white: var(--grey-100);
+
+  font-family: 'PlusJakartaSans', sans-serif;
+  color: var(--vs-text-dark);
+  background-color: var(--vs-bg-cream);
+  font-size: var(--text-s);
+  line-height: 1.6;
+
+  /* Project colors */
+  --vakuutus: #013D1E;
+}
+
+#vakuutus-lopputulos {
+  background-color: var(--vakuutus);
+}
+
+#vakuutus-lopputulos img {
+  object-fit: contain;
+}
+
+.vs-project h1,
+.vs-project h2,
+.vs-project h3,
+.vs-project h4 {
+  color: var(--vs-text-dark);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.vs-bg-dark h1,
+.vs-bg-dark h2,
+.vs-bg-dark h3,
+.vs-bg-dark h4 {
+  color: var(--vs-text-light);
+}
+
+.vs-project p,
+.vs-project li {
+  color: var(--vs-text-muted);
+  margin-block: var(--space-xxs);
+}
+
+.vs-bg-dark p,
+.vs-bg-dark li {
+  color: var(--vs-text-light-muted);
+}
+
+/* Global Reset/Base for Project Scope */
+.vs-project * {
+  box-sizing: border-box;
+}
+
+/* Layout Containers */
+.vs-main {
+  width: 100%;
+}
+
+section {
+  padding-top: var(--space-xxl);
+  padding-bottom: var(--space-xxl);
+}
+
+.vs-hero {
+  margin-top: var(--space-xl);
+  padding-block: 0;
+}
+
+.vs-hero .vs-container {
+  padding-inline: var(--space-xs);
+}
+
+.vs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-l);
+}
+
+@media (max-width: 991px) {
+  .vs-container {
+    padding: 0 var(--space-m);
+  }
+}
+
+@media (max-width: 767px) {
+  .vs-container {
+    padding: 0 var(--space-s);
+  }
+}
+
+/* Background Colors */
+.vs-bg-dark {
+  background-color: var(--vs-bg-dark);
+}
+
+.vs-intro,
+.vs-challenges,
+.vs-feature:not(.vs-bg-dark) {
+  background-color: var(--vs-bg-cream);
+}
+
+.vs-hero__media-wrapper {
+  background-color: var(--vakuutus);
+  border-radius: var(--radius-base);
+  padding: var(--space-s);
+  text-align: center;
+}
+
+.vs-hero__media img {
+  object-fit: contain;
+  max-height: 32rem;
+}
+
+/* Typography */
+.vs-title {
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  color: var(--vs-text-dark);
+}
+
+.vs-title-light {
+  color: var(--vs-text-light);
+}
+
+.vs-section-title {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  color: var(--vs-text-dark);
+}
+
+.vs-section-title--wide {
+  max-width: 600px;
+}
+
+.vs-section-lead {
+  font-size: var(--text-s);
+  color: var(--vs-text-muted);
+  max-width: 700px;
+  margin-bottom: 2.5rem;
+}
+
+.vs-lead {
+  font-size: var(--text-m);
+  color: var(--vs-text-muted);
+  line-height: 1.6;
+}
+
+.vs-subtitle-light {
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  font-size: var(--text-xxs);
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* ==================== */
+/* GENERAL LAYOUT & SPACING */
+/* ==================== */
+.vs-project hr {
+  border: 0;
+  border-top: 1px solid var(--grey-400);
+  width: 100%;
+  margin: 0;
+}
+
+
+.vs-section:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: var(--space-xxl);
+}
+
+.vs-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-l);
+}
+
+/* ==================== */
+/* INTRO SECTION */
+/* ==================== */
+.vs-intro {
+  padding-bottom: 0;
+}
+
+.vs-grid-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.vs-project-summary {
+  padding-bottom: var(--space-xxl);
+}
+
+@media (max-width: 767px) {
+  .vs-grid-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.vs-title {
+  font-size: var(--text-xxl);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--vs-text-dark);
+  margin: 0;
+}
+
+.vs-lead {
+  font-size: 1.125rem;
+  color: var(--vs-text-dark);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Meta Data Grid */
+.vs-meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 0;
+  padding: var(--space-xxl) 0;
+}
+
+.vs-meta__title {
+  font-size: var(--text-m);
+}
+
+@media (max-width: 991px) {
+  .vs-meta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 478px) {
+  .vs-meta {
+    grid-template-columns: 1fr;
+  }
+}
+
+.vs-meta__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--space-xxs);
+  align-items: flex-start;
+  padding-inline-start: 0;
+  list-style: none;
+  margin-block: var(--space-xs);
+}
+
+.vs-meta__item li {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.vs-meta__pill {
+  background-color: var(--grey-300);
+  padding: var(--space-xxs) var(--space-xs);
+  border-radius: var(--radius-small);
+  color: var(--vs-text-dark);
+}
+
+/* ==================== */
+/* CHALLENGES SECTION */
+/* ==================== */
+
+.vs-challenges__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+}
+
+@media (max-width: 767px) {
+  .vs-challenges__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+.vs-section-title {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--vs-text-dark);
+  margin-bottom: 1.5rem;
+}
+
+
+/* ==================== */
+/* PROCESS SECTION */
+/* ==================== */
+
+.vs-steps-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+  margin: 0;
+}
+
+.vs-steps-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-m);
+}
+
+.vs-step-number {
+  font-size: var(--text-m);
+  font-weight: 700;
+  color: var(--vs-text-light);
+  flex-shrink: 0;
+  width: 1.5rem;
+  line-height: 1.2;
+}
+
+.vs-steps-list h3 {
+  font-size: var(--text-m);
+  margin-bottom: var(--space-xxs);
+}
+
+.vs-step-body {
+  flex-grow: 1;
+}
+
+
+@media (max-width: 767px) {
+  .vs-steps-list li {
+    gap: var(--space-m);
+  }
+
+  .vs-step-number {
+    width: 1rem;
+    font-size: var(--text-s);
+  }
+}
+
+/* ==================== */
+/* FULL WIDTH SECTIONS */
+/* ==================== */
+.vs-section--full-width {
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.vs-image-full-container {
+  width: 100%;
+  height: auto;
+  max-height: 768px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--vs-green-dark);
+}
+
+.vs-image-full {
+  width: 100%;
+  height: 100%;
+  max-height: 768px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ==================== */
+/* IMAGE & MEDIA WRAPPERS */
+/* ==================== */
+.vs-image-wrapper {
+  margin-top: var(--space-xxl);
+  width: 100%;
+}
+
+.vs-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-base);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.vs-bg-dark .vs-image-wrapper img {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.vs-grid-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  margin-top: var(--space-xxl);
+}
+
+.vs-grid-images img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-base);
+}
+
+@media (max-width: 767px) {
+  .vs-grid-images {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==================== */
+/* LIST STYLES */
+/* ==================== */
+
+
+
+/* ==================== */
+/* OUTRO & BACK LINK */
+/* ==================== */
+.vs-outro {
+  background-color: var(--vs-green-dark);
+  color: var(--vs-text-light);
+  padding: var(--space-xxl) 0;
+  margin-bottom: 0;
+}
+
+.vs-back-link {
+  margin-top: 3rem;
+}
+
+.vs-back-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--vs-text-light);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--text-xs);
+  transition: opacity 0.2s;
+}
+
+.vs-back-link a:hover {
+  opacity: 0.8;
+}
+
+
+
+@media (max-width: 767px) {
+  section {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+  }
+
+  .vs-project-summary {
+    padding-bottom: var(--space-xl);
+  }
+
+  .vs-meta {
+    padding: var(--space-xl) 0;
+  }
+
+  .vs-container {
+    padding: 0 var(--space-s);
+  }
+}
