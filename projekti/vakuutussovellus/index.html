@@ -164,7 +164,7 @@
                                 <span class="vs-step-number" aria-hidden="true">3</span>
                                 <div class="vs-step-body">
                                     <h3 class="v-h4">Visuaaliset suunnitelmat</h3>
-                                    <p>Tutustuin käytössä olevaan design-systeemiä ja suunnittelin visuaaliset
+                                    <p>Tutustuin käytössä olevaan design-systeemiin ja suunnittelin visuaaliset
                                         käyttöliittymät. Testasin ja kehitin suunnitelmia.</p>
                                 </div>
                             </li>
@@ -191,7 +191,6 @@
         </section>
 
         <!-- YLLÄPITÄJÄ -->
-        <hr>
         <section class="vs-section">
             <div class="vs-container">
                 <div class="vs-grid-content">
@@ -237,10 +236,10 @@
                             <li>Lisäsin taulukkoon suodattimen, jolla voi piilottaa sarakkeita tai tuoda
                                 niitä näkyviin. Oletuksena kaikki sarakkeet ovat näkyvissä, mutta käyttäjä voi
                                 halutessaan tehdä taulukosta yksinkertaisemman.</li>
-                            <li>Helpotin silmäiltävyyttä erilaisten 'tagien' tai 'chipien' avulla:
+                            <li>Helpotin silmäiltävyyttä erilaisten "tagien" tai "chipien" avulla:
                                 esimerkiksi vakuutusehdon tila (voimassa/ei voimassa) erottuu selkeästi, samoin
                                 dokumenttien kieliversioiden määrä.</li>
-                            <li>Tein ensimmäisestä sarakkeesta 'leijuvan', jotta konteksti säilyy kun
+                            <li>Tein ensimmäisestä sarakkeesta "leijuvan", jotta konteksti säilyy kun
                                 pitkää riviä selataan eteenpäin.</li>
                         </ol>
                     </div>
@@ -248,6 +247,65 @@
                 <div class="vs-image-wrapper">
                     <img src="../../assets/uploads/2025/Ehtojen-metatiedot.png"
                         alt="Ylläpitotaulukon ratkaisuja: sarakkeiden suodatin, tilaa kuvaavat chipit ja leijuva ensimmäinen sarake.">
+                </div>
+            </div>
+        </section>
+
+        <!-- MUUT YLLÄPITÄJÄN TOIMET -->
+        <section class="vs-section">
+            <div class="vs-container vs-container--spaced">
+                <div class="vs-grid-content">
+                    <div class="vs-grid-content__title">
+                        <h2 class="vs-section-title">Muut ylläpitäjän toimet</h2>
+                    </div>
+                    <div class="vs-grid-content__text">
+                        <p>Ylläpidossa tarvittiin tarkastelun ja muokkauksen lisäksi kaksi muuta tärkeää
+                            toiminnallisuutta: muokkaushistoria ja
+                            luokittelija.</p>
+                    </div>
+                </div>
+                <div class="vs-grid-content">
+                    <div class="vs-grid-content__img">
+                        <img src="../../assets/uploads/2025/Muokkaa-metatietoja.png"
+                            alt="Muokkaushistorian modaali-ikkuna: muutokset esitetään lohkoina, joissa ennen/jälkeen-arvot on asetettu taulukkoon. Muutokset erotellaan värillä ja ikonilla.">
+                    </div>
+                    <div class="vs-grid-content__text">
+                        <h3>Muokkaushistoria</h3>
+                        <p>Muokkaushistorian tarkoitus oli tukea jäljitettävyyttä: mitä tietoja on muutettu, milloin ja
+                            miten. Historia avautuu
+                            modaalissa jokaisen taulukkorivin kohdalta, jotta käyttäjä voi tarkistaa muutokset ilman
+                            että konteksti katkeaa.</p>
+
+                        <p>Ratkaisut:</p>
+                        <ul>
+                            <li>Muutokset esitetään lohkoina, joista jokainen näyttää yksittäisen muokkauksen (mitä
+                                muuttui ja milloin).</li>
+                            <li>Ennen/jälkeen-arvot on asetettu taulukkoon, jotta ero on helppo nähdä yhdellä
+                                silmäyksellä.</li>
+                            <li>Muutokset erotellaan myös muulla kuin värillä, jotta vertailu toimii myös käyttäjille,
+                                jotka eivät erota värejä.</li>
+                        </ul>
+                        <p>Design-systeemissä ei ollut tähän sopivia komponentteja, joten suunnittelin näkymän itse.</p>
+                    </div>
+                </div>
+                <div class="vs-grid-content">
+                    <div class="vs-grid-content__img">
+                        <img src="../../assets/uploads/2025/Muokkaa-tietuetta.png"
+                            alt="Luokittelijanäkymä: luokittelurakenne taulukkona ja luokittelun muokkauslomake modaali-ikkunassa.">
+                    </div>
+                    <div class="vs-grid-content__text">
+                        <h3>Luokittelija</h3>
+                        <p>Luokittelijassa ylläpitäjä ylläpitää ehtojen luokittelun rakennetta, jota käytetään ehtojen
+                            järjestämiseen ja
+                            löydettävyyteen. Näkymä on erillinen, koska tämä on eri työ kuin yksittäisen dokumentin
+                            muokkaus.</p>
+                        <p>Ratkaisut:</p>
+                        <ul>
+                            <li>Tuttu taulukko + muokkaus modaalissa, sama kuvio kuin muualla.</li>
+                            <li>Muutokset tehdään hallitusti, koska luokittelut vaikuttavat laajasti koko sovellukseen.
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -274,10 +332,6 @@
                             <li>Yleisten ja erityisten vakuutusehtojen tunnistamista helpottaa nopeasti erottuva
                                 chip-elementti.</li>
                         </ul>
-                        <p>Validoin ratkaisut tekemällä pieniä käyttäjätestauksia suunnittelun aikana. Testauksiin
-                            osallistui henkilöitä, jotka
-                            eivät liittyneet projektiin. Testaus auttoi varmistamaan lähinnä havaitsemiseen liittyviä
-                            kysymyksiä.</p>
                     </div>
                 </div>
                 <div class="vs-image-wrapper">
@@ -287,8 +341,43 @@
             </div>
         </section>
 
+        <section class="vs-section vs-bg-dark">
+            <div class="vs-container vs-container--spaced">
+                <div class="vs-grid-content">
+                    <div class="vs-grid-content__title">
+                        <h2 class="vs-section-title vs-title-light">Miten virkailijan näkymä syntyi</h2>
+                    </div>
+                    <div class="vs-grid-content__text">
+                        <p>Testasin virkailijan näkymään kolmea esitystapaa: taulukko (yhtenäinen ylläpidon kanssa),
+                            kaksipalstainen korttilista ja
+                            lopullinen yksipalstainen korttilista.</p>
+                        <ul>
+                            <li>Taulukko olisi ollut looginen ratkaisu yhtenäisyyden takia, mutta käytännössä se tuntui
+                                liian tiiviiltä: rivit
+                                sulautuivat helposti toisiinsa ja asiakirjalinkkeihin osuminen oli haastavaa.</li>
+                            <li>Kaksipalstaiseen korttinäkymään mahtui yksipalstaista enemmän sisältöä kerralla, mutta
+                                sen silmäily oli hitaampaa
+                                vierekkäisten elementtien vuoksi.</li>
+                        </ul>
+                        <p>
+                            Testautin kaksipalstaista ja yksipalstaista versiota rinnakkain 2 testikäyttäjällä.
+                            Yksipalstainen voitti: sitä oli
+                            helpompi selata ylhäältä alas ja haluttu vakuutusehto löytyi nopeammin.
+                        </p>
+                        <p>
+                            Lopputulos oli yksipalstainen korttilista, koska se minimoi virheklikkaukset ja tukee
+                            tyypillistä käyttötapaa.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <img src="../../assets/uploads/2025/Virkailijan-vaihtoehdot.png"
+                        alt="Kolme vaihtoehtoista esitystapaa virkailijanäkymälle: taulukkonäkymä, kaksipalstainen korttilista ja yksipalstainen korttilista.">
+                </div>
+            </div>
+        </section>
+
         <!-- DOKUMENTAATIO -->
-        <hr>
         <section class="vs-section">
             <div class="vs-container">
                 <div class="vs-grid-content">
@@ -302,7 +391,7 @@
                             kaikista näkymistä.</p>
                         <p>Halusin varmistaa, että toteutus olisi mahdollisimman saavutettava, joten dokumentoin myös
                             saavutettavuutta. Design-systeemin valmiissa komponenteissa oli onneksi hyvin huomioitu
-                            saavutettavuus, mutta soveltavissa ratkaisuissa ohjeistukset olivat tarpeellisia. Tarkensin
+                            saavutettavuus, mutta soveltavissa ratkaisuissa ohjeistukset olivat tarpeellisia. Annoin
                             esimerkiksi suositukseni elementtien HTML-semantiikasta ja lisäsin ARIA-merkintöjä
                             apuvälineitä varten.</p>
                     </div>
@@ -324,30 +413,32 @@
                         <h2 class="vs-section-title vs-title-light">Lopputulos ja opit</h2>
                     </div>
                     <div class="vs-grid-content__text">
-                        <p>Lopputuloksena vakuutusyhtiö sai työn tekemistä helpottavan sovelluksen, joka huomioi eri
-                            käyttäjien erilaiset tarpeet. Sovellus on visuaalisesti yhtenäinen asiakkaan muiden
-                            palvelujen kanssa.</p>
-                        <p>Asiakas oli erittäin tyytyväinen suunnittelun lopputulokseen. Vaikka projektin aikataulu oli
-                            tiivis, sovelluksesta tuli asiakkaan tarpeisiin sopiva.</p>
-                        <p>Olennaisia oppejani tästä projektista:</p>
+                        <p>Vakuutusyhtiö sai tämän projektin myötä työn tekemistä helpottavan sovelluksen, joka huomioi
+                            eri käyttäjien erilaiset tarpeet. Sovellus on visuaalisesti yhtenäinen asiakkaan muiden
+                            palvelujen kanssa. Asiakas oli erittäin tyytyväinen lopputulokseen, ja suunnitelmat etenivät
+                            toteutettavaksi.</p>
+                        <p>Projekti herätti ainakin seuraavia ajatuksia:</p>
                         <ul>
-                            <li><strong>Hyvä määrittely antaa pohjan suunnittelulle.</strong> Sovelluksen vaatimukset
-                                oli määritelty tarkasti, ja minulla oli käytettävissä mm. valmiita käyttötapausten
-                                kuvauksia. Tarkat määrittelyt helpottivat suunnittelua, mutta niiden opiskeluun kului
-                                paljon aikaa. Määrittelyt jättivät onneksi
-                                myös tilaa ideoinnille.</li>
+                            <li><strong>Hyvä määrittely antaa tukevan pohjan suunnittelulle.</strong> Sovelluksen
+                                vaatimukset oli määritelty tarkasti, ja minulla oli käytettävissä mm. valmiita
+                                käyttötapausten kuvauksia. Vaikka määrittely ei korvaa käyttäjätutkimusta,
+                                suunnittelussa
+                                pääsee nopeasti vauhtiin.</li>
                             <li><strong>Design-systeemi nopeuttaa suunnitteluprosessia merkittävästi.</strong> Systeemin
                                 käytössä luovuus ei kohdistu elementtien suunnitteluun vaan siihen, miten toteuttaa
                                 ideat valmiilla komponenteilla.</li>
                             <li><strong>Ymmärsin, että designerin rooli tällaisessa kehitysprojektissa on melko
-                                    kokonaisvaltainen ja poikkitieteellinen.</strong>Huomasin, että pystyn vaikuttamaan
+                                    kokonaisvaltainen ja poikkitieteellinen.</strong> Huomasin, että pystyn vaikuttamaan
                                 moneen asiaan, jos perustelen mielipiteeni hyvin.</li>
+                            <li><strong>Sovellus olisi tarvinnut käyttäjätestausta oikeilla käyttäjillä</strong>, jotta
+                                ratkaisut olisi
+                                voitu
+                                validoida tukevammin. Lisäsimme ehdotuksestani sovellukseen palautetoiminnon, jonka
+                                avulla
+                                käyttäjä voi antaa palautetta. Vaikka se ei korvaa testausta, jatkokehityksessä
+                                toivottavasti
+                                päästään suunnittelemaan todellisten käyttäjien tarpeiden ohjaamana.</li>
                         </ul>
-                        <p>Sovellus olisi ehdottomasti tarvinnut käyttäjätestausta, mutta sille ei ollut aikaa. Ehdotin
-                            lopuksi palautetoimintoa,
-                            jonka avulla käyttäjä voi antaa palautetta sovelluksesta. Vaikka se ei korvaa testausta,
-                            jatkokehityksessä toivottavasti
-                            päästään suunnittelemaan todellisten käyttäjien tarpeiden ohjaamana.</p>
                     </div>
                 </div>
             </div>
