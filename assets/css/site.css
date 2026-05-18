@@ -2490,7 +2490,9 @@ footer {
     width: 100%;
     border-radius: var(--radius-base);
     position: relative;
-    height: 100%
+    height: auto;
+    aspect-ratio: 3 / 4;
+    align-self: start
 }
 
 .about-hero__image:not(.tag),
